@@ -1,0 +1,20 @@
+12347890abcdefghijklmnopqrsuvwxz;'/ASru
+
+~`!@#$%^&*()_+   1234567890-=
+qwertyuiop[]     QWERTYUIOP{}
+asdfghjkl;'\     ASDFGHJKL:"|
+zxcvbnm,./       ZXCVBNM<>?
+
+0123456789
++-*/=!=
+.,
+<>
+()[]{}
+\|/
+''
+""
+;:
+!@#$%^&*?
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz

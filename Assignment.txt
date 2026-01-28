@@ -1,0 +1,61 @@
+1)
+
+select *
+from regions
+where (lower(region_name) like '%a%');
+
+2)
+
+select country_name,region_id
+from countries
+where (upper(country_id) in ('IN','US')) and (lower(country_name) like ('%l%l%'));
+
+3)
+
+select *
+from countries
+where (lower(country_id) like '%n%') and (region_id between 1 and 4);
+
+4)
+
+select *
+from countries
+where (lower(country_id) like '__') and (lower(country_name) in ('japan','india','italy')); 
+
+5)
+
+select *
+from locations
+where (postal_code like '____') and (location_id between 1800 and 2600);
+
+6)
+
+select street_address 
+from locations
+where (lower(city) in ('sydney','bombay','roam')) and (lower(street_address) like '%rd%');
+
+7)
+
+select *
+from locations
+where (lower(country_id) like '_n%') and (street_address like '2%') and (postal_code >1000);
+
+
+8)
+
+select city,country_id,postal_code,street_address
+from Locations
+where (lower(city)!='tokyo') and (postal_code between 1000 and 5000) and (street_address like '%aa%');
+
+9)
+
+select *
+from locations
+where (location_id in (1600,1500,1700)) and (lower(country_id) = 'us') and (postal_code like '_____');
+
+10)
+
+select *
+from locations
+where (state_province like '%maha%') and (city like '__m%') and (postal_code between 3000 and 6000);
+

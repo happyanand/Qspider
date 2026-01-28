@@ -1,0 +1,442 @@
+select * from emp
+where lower(ename) like 'p%';
+
+select * from emp
+where (lower(job) in ('analyst','clerk')) and (deptno in (10,20));
+
+select dname from dept
+where (loc is null) and (lower(dname) like '%e%e%');
+
+select * from emp
+where (lower(job) like '%a%a%') and (sal between 1200 and 2800) and ( deptno in (10,20,30));
+
+select * from emp
+where (mgr not like '%8') and (lower(job) != 'manager' or lower(job) != 'salesman') and (deptno=30);
+
+select * from emp
+where (comm is null) and (lower(job)='clerk' or lower(job)='manager') and (hiredate like '%81') and(sal>1500);
+
+select * from emp
+where (ename like '_____') and (hiredate between '01-JAN-80' and '31-DEC-81') and (sal between 800 and 2000) and (deptno =30 or deptno = 40);
+
+select * from emp
+where (ename like '_____') and (lower(ename) like '%a%') or (lower(ename) like '%e%') or (lower(ename) like '%i%') or (lower(ename) like '%o%') or (lower(ename) like '%u%');
+
+select * from emp
+where (lower(ename) like '%__%');
+
+select * from emp
+where (lower(ename) like 's%') and (lower(ename) not like '%a') and (lower(ename) not like '%e') and (lower(ename) not like '%i') and (lower(ename) not like '%o') and (lower(ename) not like '%u');
+
+select * from emp 
+where (ename like "%'%");
+
+select distinct job from emp 
+where (lower(job)='manager');
+
+select * from emp 
+where (mgr like '%8');
+
+select * from emp 
+where (lower(job) = 'salesman') and (sal between 1500 and 3000);
+
+select * from emp 
+where (sal between 1000 and 2000) and (deptno in (10,20,30)) and (lower(job)!='clerk'));
+
+select * from emp 
+where (lower(ename) like 'a%') and (sal>1000);
+
+select sname from student 
+where (per>60);
+
+select * from emp 
+where (lower(ename) like '%m%');
+
+select * from emp 
+where (lower(job)!= 'clerk') and (deptno in (10,20));
+
+select * from emp 
+where (lower(ename) like '%p%p%') and (sal between 1000 and 3000);
+
+select ename from emp 
+where (comm is null) and (deptno in(10,20));
+
+select * from emp
+where (lower(job)!= 'manager') and (deptno in(20,30));
+
+select * from emp
+where (lower(ename) not like 'a%');
+
+select * from emp
+where (hiredate like '%87');
+
+select * from emp
+where (lower(ename) like '%t%t%');
+
+select * from emp
+where (empno != 7654);
+
+select * from emp
+where (lower(job) = 'salesman') and (deptno =30);
+
+select * from emp
+where (sal in (3000,2000));
+
+select * from emp
+where (lower(ename) like '%r%');
+
+select * from emp
+where (sal between 800 and 2500);
+
+select * from emp
+where (deptno !=30);
+
+select * from emp
+where (lower(job) ='analyst') and (sal>=2000);
+
+select * from emp
+where (lower(ename) like '%t') and (lower(ename) like 'a%');
+
+select sal*12 annsal from emp
+where (lower(job) = 'manager');
+
+select * from emp
+where (lower(job) like '%e_');
+
+select * from emp
+where (comm is null) and (sal>1000);
+
+select dname from dept
+where (lower(loc) like '%ll%');
+
+select * from emp
+where (deptno !=20) and (lower(ename) not like 'm%');
+
+select * from emp
+where (empno between 7000 and 8000);
+
+select * from emp
+where (sal not between 1500 and 3000);
+
+select * from emp
+where (sal >1000) and (hiredate like '%-DEC-%') and (lower(job) ='manager');
+
+select * from emp
+where ( job like '____') and (deptno = 20);
+
+select * from emp
+where (lower(job) = 'clerk') and (lower(ename) like '%s') and (deptno = 10);
+
+select ename from emp
+where (ename like '_____');
+
+select * from emp
+where (sal>comm);
+
+select ename,sal,deptno from emp;
+
+select * from emp
+where (lower(ename) like '_a%r_');
+
+select * from emp
+where (sal >300 and sal<=3000);
+	(or)
+select * from emp
+where (sal between 301 and 3000);
+
+select * from emp
+where (lower(job) ='analyst');
+
+select * from emp
+where (comm is null);
+
+select (sal*12)+500 annsal from emp
+where (lower(job)='manager') and (hiredate like '%APR%' or hiredate like '%MAY%');
+
+select * from emp
+where (empno like '78%' or empno like '79%') and(lower(job) like '%e%') and (deptno in (20,30));
+
+select * from emp
+where (lower(job)='manager') and (deptno in (30,20)) and (hiredate between '02-JAN-81' and '09-JUN-81');
+
+select ename,job,hiredate from emp
+where (lower(ename) like 'a%' or lower(ename) like 's%') and (deptno in (10,20));
+
+select dname from dept
+where (lower(dname) like '%s%s%') and (lower(loc) like '%o%' or lower(loc) like '%a%');
+
+select * from emp
+where (lower(job) ='manager') and (deptno in(20,30)) and (hiredate between '02-JAN-81' and '09-JUN-81');
+
+select * from emp
+where (empno like '78%' or empno like '79%') and (lower(job) like '%e%') and  (deptno in(20,30));
+
+select ename,job,hiredate,comm from emp
+where (lower(ename) like 'a%' or lower(ename) like 's%') and (deptno in (20,30)); 
+
+select dname from dept
+where (lower(dname) like '%s%s%') and (lower(loc) like '%o%' or lower(loc) like '%a%');
+
+select ename,(sal*12)+5000 annsal from emp
+where (lower(job)='manager') and (hiredate like '%APR%' or hiredate like '%MAY%');
+
+select * from emp
+where (lower(job) = 'manager') and (deptno in (20,30)) and (hiredate between '02-JAN-81' AND '09-JUN-81');
+
+select * from emp
+where (empno like '78%' or empno like '79%') and (lower(job) like '%e%') and (deptno in (20,30));
+
+select job,hiredate from emp
+where (lower(ename) between like 'a%' or lower(ename) like 's%') and (deptno in (20,30));
+
+select dname from dept
+where (lower(dname) like '%s%s%') and (lower(loc) like '%o%' or lower(loc) like '%a%');
+
+select ename,(sal*12)+5000 annsal from emp
+where (lower(job)='manager') and(hiredate like '%APR%' OR hiredate like '%MAY%');
+
+select * from emp
+where (deptno=20) and (sal<500);
+
+select * from emp
+where (deptno = 10);
+
+select * from emp
+where (lower(job)='manager') and (deptno = 30);
+
+select * from emp
+where (sal>3000);
+
+select * from emp
+where (lower(job) ='analyst');
+
+select * from emp
+where (sal between 2000 and 3000) and (deptno not in (10,20)) and (lower(job)='clerk');
+
+select * from emp
+where (lower(ename) like '%ee');
+
+select * from emp
+where (comm is not null) and (deptno =30);
+
+select * from emp
+where (sal between 2500 and 5000) and (deptno in(10,20));
+
+select * from emp
+where (lower(job)='manager') and (deptno=20);
+
+select * from emp
+where (empno like '_5%' and mgr like '_5%');
+
+select * from emp
+where (lower(ename) like '__a%');
+
+select * from emp
+where (lower(job)='manager') and (sal<3000);
+
+select dname from dept
+where (lower(dname) like '__n%');
+
+select * from emp
+where (lower(job)='clerk') and (sal <1500)and (deptno in (10,20,30));
+
+select * from emp
+where (lower(job) like '%t%') and (lower(ename) like '%t%');
+
+select * from emp
+where (comm is null);
+
+select dname from dept
+where (lower(loc) like '%o%');
+
+select * from emp
+where (empno like '%9') and (lower(job) != 'manager');
+
+select * from emp
+where (hiredate like '%FEB%' or hiredate like '%MAY%');
+
+select * from emp
+where (mgr =7698);
+
+select * from emp
+where (deptno in(20,30))
+group by max(sal);
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+select * from emp
+where (
+
+
+
+
+
+
+
+
