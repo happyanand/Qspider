@@ -1,0 +1,115 @@
+1)DQL-Select
+2)DDL-create,alter,drop,truncate,rename
+3)DML-insert,update,delete
+4)DCL-grant,revoke
+5)TCl-commit,rollback,savepoint
+
+DQL-fetch/retrive/acess data from databse is DQL.
+selcet-fetch/retrive/acess data in a specfic table is called select
+1)projection
+2)slection
+3)joins
+1)projections:fetch/retrive/acess data in a specfic table by selecting all/sepic/required colmn in database
+we can restric colmn
+we canot restric rows
+
+
+syntax:
+select */[distinct] c.n name/express alias name-----)2
+from table_name;-----}1
+
+charect of from;
+1)table name an argument
+2)more than one table
+3)whole table for query execution
+
+charect of select clause:
+1)*,[distict],colmnname,expr,alias name these are arguments
+2)row by row/record by record
+3)prepare the output/result
+
+Alias Name:
+
+temporyname/alternative name to given to colmm / exprs present in the output.
+whenever we want to change colmm/exprs  in result / o/p then we schould go for alias name.
+whenever we are write alias name its is not change in original table.
+
+syntax:
+
+select colmm/expr [as] alias_name
+from table_name;
+
+Experession:
+
+expr is statement will generate result/output
+generally expr is combination of operators and Operands
+
+Operators:
+
+classified  3 types:
+1)arithmetic Operator --->+,-,*,/
+2)Logical operator --->AND,OR,NOT
+2)Relational Opertor ----> <,>,=,!=
+
+Operands:
+
+direct/imediate value
+clasified into 2 types
+
+1)direct/imediate value
+2)Variable/Identifier
+
+
+Literals:
+
+direct/Imediate value given to sql statements.
+
+classifed into 3 tyes:
+
+1)Number Litteral
+
+direct/Imediate value in which type of number to given to sql statements.
+
+example: 436,10.25,0
+
+
+2)String/Char litteral
+
+direct/Imediate value in which type of String/Char to given to sql statement.
+
+example: 'ahdn','56kjh','!@#$%%^&*^)('
+
+
+3)Date litteral:
+
+direct/Imediate value in which type of Date format to given to sql statement.
+Single quot is important in date literal.
+
+example: 'DD-MON-YY' OR 'DD-MON-YYYY'
+	'12-JAN-81' OR '31-DEC-1999'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

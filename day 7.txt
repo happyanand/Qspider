@@ -1,0 +1,71 @@
+SPECIAL OPERATOR:
+
+4 TYPES:
+
+1)IN	2)BETWEEN    3)LIKE	4)IS	
+
+1)IN Operator:
+
+* column name is same values are different
+
+IN Operator:
+
+* Multi value Operator
+* accept single value in LHS side and multi value in RHS side
+* will perform equalto comparaison
+* will compare single LHS valuse with all present in RHS side
+* it will return true if any one of the cond/comparaison is true
+* it will return false if all the cond/comparaison is false
+* working similar to OR operator
+
+Syntax:
+	where c.n/expr IN (val1,val2,val3...);
+
+2)BETWEEN Operator:
+
+* when the input is in form of range
+
+BETWEEN Operator: 
+
+* written as  >= lowerlimit and  <= upper limit
+* always lower limt < upper limit
+* BETWEEN operator working as inclusive range(lower limit value to upper limit value)
+* it will return true when all the cond/coparaison is true
+* it will return false if any one of the cond/comparaison is false
+* working similar to AND operator
+
+Syntax:
+	where c.n/expr BETWEEN lower value and upper value;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

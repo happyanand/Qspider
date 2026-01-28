@@ -1,0 +1,75 @@
+Order by Clause:
+
+* used to sort output ascending/desending order
+* default will sort in ascending order written ASC keyword is optional
+* sort o/p in decending order DESC keyword is mandatory	
+* order by clause last statement in a query
+
+Syntax:
+
+	select */[distinct] c.n/expr alias_name
+	from table name
+	order by c.n/expr/alias_name [ASC]/DESC;
+
+Distinct Clause:
+
+* used to Eliminate duplicate values present in the result/output
+* distinct clause will execute after the select clause
+
+Syntax:
+
+	select */[distinct] c.n/expr alias_name
+	from table name
+
+Specifing multiple column's in distinct clause:
+
+* we are writing multiple column's in distict clause it will not eliminate
+* it will combine mutiple column's in single column then it will eliminate duplicate values
+
+
+Selection:
+
+* Fetching/Reterving/Accessing data from specific table by selecting all/spec/required no of columns and
+ also specific/required no of row's in database is called selection
+
+
+Syntax:
+
+	select */[distinct] c.n/expr alias_name   --->3
+	from table name --->1
+	where <cond1>AND /OR<cond1>;  --->2
+
+First from clause will execute
+second where clause will execute
+last select clause will execute
+
+
+Char of where clause:
+
+* used to filter recods
+* select/reject the record
+* Syntax 
+	where LHS_value relational operator RHS_value;
+* execute row by row/record by record
+* Specify cond is true retain record.spec cond false reject the record
+* Specify cond is true/false it will not stop the execution  for all record present in table
+* will not execute multiple records at one shot but multiple conditon for single record at one shot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

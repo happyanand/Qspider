@@ -1,0 +1,114 @@
+CASE MANIPULATION FUNCTION:
+
+rules:
+* sql language (table_name,coln_anme,clause/stmt,operator_name) is not a case sensective 
+  only the value present in a table is case sensective.
+* whenever we are wring query by loohking into table struct 
+  we should write query not by looking into values present in table
+
+ 3 types:
+
+1) UPEER(): use to convert given string in uppercase.
+
+syntax:
+	upper('string'/c.n)
+
+2) LOWER(): use to convert given string in lowercase.
+
+syntax:
+	lower('string'/c.n)
+
+3) INITCAP(): use to convert given string in initcapcase(initial letter capital).
+
+syntax:
+	initcap('string'/c.n)
+
+
+WHEN TO GO CASE MANIPULATION FUNCTION:
+	
+	we are writing string/char litteral in where clause
+	
+ 	what type of case manipulation fuction in LHS side same type of value as RHS side
+
+
+OPERATORS:
+
+* we want to write multiple cond in where clause 
+* will exceute multiple cond in single record at one shot
+
+5 TYPES:
+
+1) Arithmetic operator ---> +,-,*,/
+2) Concadination operator ---> ||
+3) Relational operator ---> <,>,<=,>=,=,!=
+4) Special operator ---> IN,BETWEEN,LIKE,IS
+5) Logical operator ---> AND,OR,NOT
+
+Concadination operator ||
+* Combing,merging multiple string into single string
+
+Syntax:
+	'string1'/c.n1 || 'string2'/c.n2
+
+LOGICAL OPERATOR:
+
+3 logical operator:
+
+1)AND
+2)OR
+3)NOT
+
+
+
+1)AND:
+
+when the given cond's are mandatory to execute then we should go AND operator
+
+case1:
+ 1) if cond1 is TRUE the o/p of AND operator is depending on cond2
+ 2) if cond1 is true o/p is true.
+    if cond2 is false the o/p is false.
+case2:
+ 1) if cond1 is false whatever it might be cond2 the o/p AND operator should become false
+
+
+ 2)OR:
+
+ when either of the conditions are mandatory to execute then go OR operator
+
+case1:
+ 1) if cond1 is FALSE whatever it might be cond2 the o/p OR operator should become TRUE
+case2:
+ 1) if cond1 is FALSE the o/p of OR operator is depending on cond2
+ 2) if cond2 is true o/p is true else
+    if cond2 is false the o/p is false.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

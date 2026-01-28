@@ -1,0 +1,113 @@
+
+LIKE Opearter:
+
+	used to perform Pattern matching/Wild card search
+
+
+Pattern matching/Wild card search:
+	
+	Combination of ordinary char/special char
+
+Ordinary Char:
+	
+	which does not have any special significant (there is no meaning)
+
+Special char
+
+	which as some special significant (there is a meaning)
+
+1)percentaile(%):
+
+	accept all char at any number of time  [A-Z][a-z][!@#$^&*] except[ % and _ ]
+	min ---> 0  occurence
+	max ---> oo occurence
+
+2)Underscore(_):
+	
+	accept all char at only one time
+	min ---> 1  occurence
+	max ---> 1  occurence
+
+syntax:
+ 
+ where c.n/expr LIKE 'pattern /wield card search';
+
+
+
+
+write a pattern ename should begins with 's' char
+		
+		's%'
+
+write a pattern ename should ends with 's' char
+
+		'%s'
+
+write a pattern ename should consists of 's' char
+
+		'%s%'
+
+write a pattern ename should begins with two consective 's' char
+
+		'ss%'
+
+write a pattern ename should ends with two consective 's' char
+
+		'%ss'
+
+write a pattern ename should consist of two consective 's' char
+
+		'%ss%'
+
+write a pattern ename should consist of two 's' char
+
+		'%s%s%'
+
+write a pattern ename should consist of 'man' sub string
+
+		'%man%'
+
+write a pattern ename should beging 2nd char should be 's' char
+		
+		'_s%'
+
+write a pattern ename should beging 3rd char should be 's' char
+
+		'_ _ s%'
+
+write a pattern employee should be earning exactly 4 digit salary 
+
+		'_ _ _ _'
+
+write a pattern employee should be hired in a year '81'
+
+		'%81'
+
+write a pattern employee should be hired in a year 'FEB-81'
+
+		'%-FEB-81'
+
+write a pattern employee should be hired in 'FEB'
+
+		'%-FEb-%'
+
+wqd employee name should begins with 'a' char
+
+	select ename
+	from emp
+	where (lower(ename) LIKE 'a%');
+
+write a pattern employee details should consist of 's' char and department no 10,20.
+
+	select *
+	from emp
+	where (lower(ename) like '%s%') and (deptno in (10,20));
+
+
+
+
+
+
+
+
+
